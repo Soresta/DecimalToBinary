@@ -8,19 +8,14 @@ public class DecimalToBinary {
         System.out.print("Tamsayı giriniz: ");
         number = read.nextInt();
         bolum = number;
-        int[] binaryList = new int[100];
-        int i = 0;
+        String sonuc  ="";
 
         while (bolum != 0) {
             bolum = bolum / 2;
             kalan = number - bolum * 2;
-            binaryList[i] = kalan;
-            i++;
+            sonuc=kalan + sonuc;
             number = bolum;
         }
-
-        for (int m = i - 1; m >= 0; m--) {
-            System.out.print(binaryList[m]);
-        }
+        System.out.println(sonuc);
     }
 }
